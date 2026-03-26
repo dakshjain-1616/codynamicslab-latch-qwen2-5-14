@@ -400,3 +400,4 @@ class ReportGenerator:
         q4_std = results.get("quantized_std_dev")
 
         lines:
+
