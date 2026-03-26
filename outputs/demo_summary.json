@@ -1,0 +1,32 @@
+{
+  "demo_run": true,
+  "model": "CoDynamicsLab/LATCH-Qwen2.5-14B",
+  "quant_type": "Q4_K_M",
+  "mock_mode": true,
+  "features_enabled": {
+    "compare_quants": false,
+    "inspect_gguf": false,
+    "history": false
+  },
+  "perplexity": {
+    "fp16": 100.0,
+    "quantized": 101.8182,
+    "delta_percent": 1.818,
+    "passes": true
+  },
+  "vram_estimate_gb": 7.604,
+  "fits_8gb_vram": true,
+  "inference_success": true,
+  "step_timings_s": {
+    "1_init": 0.001,
+    "2_convert": 0.003,
+    "3_perplexity": 0.012,
+    "4_vram_inference": 0.001,
+    "5_report": 0.004
+  },
+  "output_files": {
+    "report": "outputs/quantization_report.md",
+    "results": "outputs/benchmark_results.json",
+    "gguf_stub": "outputs/CoDynamicsLab--LATCH-Qwen2.5-14B-q4_k_m.gguf"
+  }
+}

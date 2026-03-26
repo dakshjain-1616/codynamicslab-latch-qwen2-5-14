@@ -1,0 +1,59 @@
+{
+  "run_metadata": {
+    "timestamp": "2026-03-26T09:45:00Z",
+    "pipeline_version": "1.1.0",
+    "mock_mode": true,
+    "step_timings": {
+      "1_init": 0.001,
+      "2_convert": 0.003,
+      "3_perplexity": 0.012,
+      "4_vram_inference": 0.001,
+      "5_report": 0.004
+    }
+  },
+  "model": "CoDynamicsLab/LATCH-Qwen2.5-14B",
+  "quantization": {
+    "type": "Q4_K_M",
+    "gguf_info": {
+      "path": "outputs/CoDynamicsLab--LATCH-Qwen2.5-14B-q4_k_m.gguf",
+      "size_bytes": 185,
+      "size_gb": 0.0,
+      "valid_gguf_magic": true,
+      "mock_mode": true
+    }
+  },
+  "perplexity": {
+    "fp16": 100.0,
+    "fp16_std_dev": 5.0341,
+    "fp16_ci_lower": 98.0412,
+    "fp16_ci_upper": 101.9588,
+    "quantized": 101.8182,
+    "quantized_std_dev": 5.1248,
+    "quantized_ci_lower": 99.8073,
+    "quantized_ci_upper": 103.829,
+    "delta": 0.018182,
+    "delta_percent": 1.818,
+    "threshold": 0.05,
+    "num_samples": 20
+  },
+  "gguf_metadata": null,
+  "quality_gate": {
+    "passes": true,
+    "threshold_percent": 5.0
+  },
+  "vram_estimate": {
+    "weights_gb": 7.203,
+    "kv_cache_gb": 0.101,
+    "activations_gb": 0.3,
+    "total_estimated_gb": 7.604,
+    "fits_8gb_vram": true
+  },
+  "inference_test": {
+    "success": true,
+    "mock": true,
+    "prompt": "The future of AI is",
+    "output": "The future of AI is bright and transformative. Large language models continue to advance rapidly, bringing powerful capabilities to consumer hardware through quantization techniques like Q4_K_M.",
+    "tokens_generated": 50,
+    "gguf_path": "outputs/CoDynamicsLab--LATCH-Qwen2.5-14B-q4_k_m.gguf"
+  }
+}
