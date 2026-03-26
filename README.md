@@ -4,9 +4,16 @@
 
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Tests](https://img.shields.io/badge/tests-179%%20passed-brightgreen.svg)]()
+[![Tests](https://img.shields.io/badge/tests-179%20passed-brightgreen.svg)]()
 
 > Automate Qwen2.5-14B quantization with a hard build failure if perplexity degradation exceeds 0.05.
+
+## The Problem  
+Existing quantizers for large language models often prioritize size reduction over accuracy, leading to significant perplexity drift that degrades model performance. Developers using tools like `llama.cpp` or generic GGUF converters lack a built-in mechanism to enforce strict accuracy constraints, making it difficult to ensure quantized models maintain near-original performance. This gap forces developers to manually validate perplexity, adding unnecessary complexity to their workflows.
+
+## Who it's for  
+This tool is for developers who need to deploy large language models like LATCH-Qwen2.5-14B on resource-constrained devices while preserving accuracy. A typical use case is a developer optimizing a chatbot for deployment on edge devices with limited VRAM, where maintaining low perplexity drift is critical for user experience.
+
 
 ## Install
 
